@@ -1,10 +1,20 @@
 # Interceptor MultiLang - Windows Input SDK for Modern Languages
 
-Use [Interceptor](https://github.com/TitanCSA/Interceptor) from **Python, JavaScript, TypeScript, C#, Java, Go, Rust, C and C++**. Receive input, edit its state, and send it back through the existing Windows kernel driver.
+Capture, modify, block and generate keyboard, mouse and compatible gamepad input on Windows using **Python, JavaScript, TypeScript, C#, Java, Go, Rust, C and C++**.
 
 **[Download the complete package](https://github.com/TitanCSA/Interceptor-MultiLang/releases/latest)** | [API and input fields](docs/API.md) | [Examples](examples/)
 
-One native DLL, small language bindings, and the same workflow for **keyboard, mouse, HID gamepad, XInput/XUSB, XInputHID and GIP**. Counts, source routing and capture context management stay inside the wrapper. HID controls remain descriptor-driven and retain repeated axes, buttons, hats, wide values and unknown report bytes.
+## What is Interceptor?
+
+[Interceptor](https://github.com/TitanCSA/Interceptor) is a **Microsoft-signed Windows kernel filter driver** with a C++ SDK. A filter driver sits in a supported physical device's Windows input stack, allowing your application to receive its input before Windows applications consume it. Each event identifies its source, so you can treat two keyboards, mice or controllers differently.
+
+Your application can forward an event unchanged, edit its state, block it, or generate input for an existing supported source. For example, you can remap a keyboard key, invert mouse movement, change a gamepad's stick response, or build an accessibility tool. Changes travel back through the driver's input path. Without an active capture application, physical input passes through normally; closing the application releases capture.
+
+The driver supports **keyboard, mouse, HID gamepad, XInput/XUSB, XInputHID and GIP** on **Windows 10 1709+ / Windows 11 x64**. Compatible controller profiles include **DualShock 4 / DS4, DualSense, wired Xbox 360, Xbox One and Xbox Series X|S**; support depends on connection, descriptor and protocol. See the [compatibility guide](https://github.com/TitanCSA/Interceptor/blob/main/docs/COMPATIBILITY.md).
+
+Interceptor independently evolves the input-interception workflow popularized by [oblitum/Interception](https://github.com/oblitum/Interception), with its own implementation and API. It is not affiliated with oblitum or ABI-compatible with the original Interception SDK.
+
+**Interceptor MultiLang is the wrapper that makes this driver accessible from other languages.** One native DLL and small language bindings expose the same simple workflow: **receive inputs, edit their state, send them back**. Counts, source routing and capture context management stay inside the wrapper. HID controls remain descriptor-driven and retain repeated axes, buttons, hats, wide values and unknown report bytes. The matching Interceptor driver is still required; its installer is included in the complete release ZIP.
 
 ## Start
 
