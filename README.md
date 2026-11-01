@@ -2,6 +2,17 @@
 
 Capture, modify, block and generate keyboard, mouse and compatible gamepad input on Windows using **Python, JavaScript, TypeScript, C#, Java, Go, Rust, C and C++**.
 
+<!-- full-version-contact:start -->
+> [!IMPORTANT]
+> **Get the full driver version without demo restrictions**
+>
+> **Discord username: `titancsa`**
+>
+> Open Discord, choose **Friends > Add Friend**, enter **`titancsa`**, then send a direct message. Ask for the **full driver version without the demo time limit**, and mention **Interceptor MultiLang**.
+>
+> The demo limit belongs to **Interceptor**, the driver used by this project. Ask for pricing and the appropriate license / activation instructions; the application or wrapper source keeps its existing license.
+<!-- full-version-contact:end -->
+
 **[Download the complete package](https://github.com/TitanCSA/Interceptor-MultiLang/releases/latest)** | [API and input fields](docs/API.md) | [Examples](examples/)
 
 ## What is Interceptor?
