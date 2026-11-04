@@ -122,7 +122,13 @@ Device support depends on the existing driver's supported connection, descriptor
 
 ## Build and validate
 
-The source tree contains `native/`, the two-file `sdk/`, `bindings/`, `examples/`, `tests/` and `licenses/`. No kernel source is included.
+The matching Interceptor demo driver source is available; see
+[driver/README.md](driver/README.md) for build instructions and separate
+evaluation-source terms. Those terms apply to Titan-authored driver code. Third-party
+source licenses and existing application/SDK licenses remain applicable. Full/commercial
+implementation and private signing or activation material are excluded.
+
+The source tree contains `native/`, the two-file `sdk/`, `bindings/`, `examples/`, `tests/` and `licenses/`. Demo/evaluation driver source is documented in [driver/README.md](driver/README.md).
 
 ```powershell
 .\Build.ps1 -Packages -IncludeDriver
