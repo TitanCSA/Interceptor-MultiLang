@@ -3,21 +3,15 @@
   "packages": [
     {
       "directory": "packaging/native",
-      "central_registry_status": "not_published",
-      "distribution": "GitHub source and downloadable release artifacts",
-      "source_layout": "Shared native SDK source; registry recipes are kept alongside CMakeLists.txt."
-    },
-    {
-      "directory": "packaging/native",
-      "central_registry_status": "not_published",
-      "distribution": "GitHub source and downloadable release artifacts",
-      "source_layout": "Shared native SDK source; registry recipes are kept alongside CMakeLists.txt."
-    },
-    {
-      "directory": "packaging/native",
-      "central_registry_status": "not_published",
-      "distribution": "GitHub source and downloadable release artifacts",
-      "source_layout": "Shared native SDK source; registry recipes are kept alongside CMakeLists.txt."
+      "build_system": "CMake",
+      "registry_recipes": {
+        "vcpkg": "packaging/native/portfile.cmake",
+        "Conan": "packaging/native/conanfile.py",
+        "NuGet": [
+          "packaging/native/TitanCSA.InterceptorMultiLang.Native.nuspec"
+        ]
+      },
+      "distribution": "Shared native source; registry publication is reported separately below"
     },
     {
       "directory": "Interceptor-MultiLang-Python-pypi",
@@ -64,5 +58,148 @@
   "native_source_archive": {
     "url": "https://github.com/TitanCSA/Interceptor-MultiLang/releases/download/sdk-v1.0.0/interceptor-multilang-sdk-1.0.0.tar.gz",
     "sha256": "c662942a80b6eee137cad044f51ae0639700ff0044941869da50981a52c51105"
-  }
+  },
+  "registry_publications": {
+    "CPP/vcpkg": {
+      "status": "published_custom_registry",
+      "registry": "https://github.com/TitanCSA/vcpkg-registry",
+      "baseline": "2a5f4f4037f5fbd911344250e43e7a1d48e04fe6",
+      "port": "interceptor-multilang-sdk",
+      "microsoft_curated_registry": false
+    },
+    "CPP/conan": {
+      "status": "public_recipe_builds_locally",
+      "conan_center": false,
+      "directory": "Interceptor-MultiLang-CPP-conan",
+      "github_directory": "packaging/native"
+    },
+    "CPP/nuget": {
+      "status": "paused_pending_owner_email_confirmation",
+      "name": "Interceptor-MultiLang.Native",
+      "version": "1.0.0",
+      "registry_published": false,
+      "consumer_build_verified": true,
+      "documentation_bundled": true
+    },
+    "NET/nuget": {
+      "status": "paused_pending_owner_email_confirmation",
+      "name": "Interceptor.MultiLang",
+      "version": "1.0.1",
+      "registry_published": false,
+      "consumer_build_verified": true,
+      "documentation_bundled": true
+    },
+    "Python/pypi": {
+      "status": "published_install_verified",
+      "name": "interceptor-multilang",
+      "version": "1.0.1",
+      "url": "https://pypi.org/project/interceptor-multilang/1.0.1/",
+      "documentation_bundled": true,
+      "examples_bundled": true,
+      "registry_published": true
+    },
+    "Python/conda-forge": {
+      "status": "submitted_pending_maintainer_review",
+      "name": "interceptor-multilang",
+      "version": "1.0.1",
+      "pull_request": "https://github.com/conda-forge/staged-recipes/pull/35613",
+      "registry_published": false,
+      "conda_build_and_tests_passed": true,
+      "custom_channel": "https://raw.githubusercontent.com/TitanCSA/sdk-packages/3bdd457537159e83157bed70f5fae70e07be0f47/conda-channel",
+      "custom_channel_install_verified": true,
+      "custom_channel_is_conda_forge": false
+    },
+    "Rust/cargo": {
+      "status": "published_install_verified",
+      "name": "interceptor-multilang",
+      "version": "1.0.1",
+      "documentation_bundled": true,
+      "registry_published": true,
+      "url": "https://crates.io/crates/interceptor-multilang",
+      "public_consumer_build_verified": true
+    },
+    "JavaScript/npm": {
+      "status": "published_install_verified",
+      "name": "interceptor-multilang",
+      "version": "1.0.0",
+      "directory": "Interceptor-MultiLang-JavaScript-npm",
+      "documentation_bundled": true,
+      "examples_bundled": true,
+      "registry_published": true,
+      "url": "https://www.npmjs.com/package/interceptor-multilang"
+    },
+    "Java/maven": {
+      "status": "published_install_verified",
+      "coordinates": "io.github.titancsa:interceptor:1.0.1",
+      "registry_published": true,
+      "url": "https://central.sonatype.com/artifact/io.github.titancsa/interceptor/1.0.1",
+      "documentation_bundled": true
+    },
+    "Java/jitpack": {
+      "status": "published_verified",
+      "coordinates": "com.github.TitanCSA:Interceptor-MultiLang:java-sdk-v1.0.1",
+      "jar": "https://jitpack.io/com/github/TitanCSA/Interceptor-MultiLang/java-sdk-v1.0.1/Interceptor-MultiLang-java-sdk-v1.0.1.jar",
+      "sha256": "93dbd6a78b3e8fb0bfd664198a0ad11b515ab5c03207b3db1784fe6a60b03f0e"
+    },
+    "Go/modules": {
+      "status": "published_verified",
+      "module": "github.com/TitanCSA/Interceptor-MultiLang/Interceptor-MultiLang-Go-modules",
+      "version": "v1.0.0",
+      "proxy": "https://proxy.golang.org/github.com/!titan!c!s!a/!interceptor-!multi!lang/!interceptor-!multi!lang-!go-modules/@v/v1.0.0.info"
+    },
+    "Go/pkg-go-dev": {
+      "status": "indexed_verified",
+      "url": "https://pkg.go.dev/github.com/TitanCSA/Interceptor-MultiLang/Interceptor-MultiLang-Go-modules@v1.0.0"
+    },
+    "PowerShell/gallery": {
+      "status": "published_install_verified",
+      "name": "InterceptorMultiLang",
+      "version": "1.0.0",
+      "directory": "Interceptor-MultiLang-PowerShell-gallery",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "native_tests_passed": true,
+      "protocol_tests_passed": false,
+      "github_downloads": "https://github.com/TitanCSA/Interceptor-MultiLang/releases/tag/additional-language-sdks-v1.0.0",
+      "url": "https://www.powershellgallery.com/packages/InterceptorMultiLang/1.0.0"
+    },
+    "Dart/pub-dev": {
+      "status": "published_install_verified",
+      "name": "interceptor_multilang",
+      "version": "1.0.0",
+      "directory": "Interceptor-MultiLang-Dart-pub-dev",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "native_tests_passed": true,
+      "protocol_tests_passed": false,
+      "github_downloads": "https://github.com/TitanCSA/Interceptor-MultiLang/releases/tag/additional-language-sdks-v1.0.0",
+      "url": "https://pub.dev/packages/interceptor_multilang"
+    },
+    "Ruby/rubygems": {
+      "status": "published_install_verified",
+      "name": "interceptor-multilang",
+      "version": "1.0.0",
+      "directory": "Interceptor-MultiLang-Ruby-rubygems",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "native_tests_passed": true,
+      "protocol_tests_passed": false,
+      "github_downloads": "https://github.com/TitanCSA/Interceptor-MultiLang/releases/tag/additional-language-sdks-v1.0.0",
+      "url": "https://rubygems.org/gems/interceptor-multilang"
+    },
+    "PHP/packagist": {
+      "status": "published_install_verified",
+      "name": "titancsa/interceptor-multilang",
+      "version": "1.0.0",
+      "directory": "Interceptor-MultiLang-PHP-packagist",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "native_tests_passed": true,
+      "protocol_tests_passed": false,
+      "github_downloads": "https://github.com/TitanCSA/Interceptor-MultiLang/releases/tag/additional-language-sdks-v1.0.0",
+      "repository": "https://github.com/TitanCSA/interceptor-multilang-php",
+      "url": "https://packagist.org/packages/titancsa/interceptor-multilang"
+    }
+  },
+  "coverage_note": "Missing language bindings are explicitly listed. Published GitHub archives are distinct from central registry acceptance. Local organized SDK folders are retained."
 }
