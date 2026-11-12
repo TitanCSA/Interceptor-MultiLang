@@ -65,15 +65,15 @@ For devices connected after installation, call `initialize()` / `Initialize()` b
 | JavaScript | Node.js 20+, x64 | `node examples/node/remap.cjs` |
 | TypeScript | Node.js 24+, x64 for direct `.cts` execution | `node examples/typescript/remap.cts` |
 | C# / .NET | .NET 8+ | `dotnet run --project examples/dotnet/Remap.csproj` |
-| Java | JDK 22+ | Compile the Java example, then launch with `--enable-native-access=ALL-UNNAMED`; [commands](docs/API.md#java) |
+| Java | JDK 22+ | Compile the Java example, then launch with `--enable-native-access=ALL-UNNAMED`; [commands](API.md#java) |
 | Go | Go 1.21+, Windows amd64 | From `examples/go`: `go run .` - no cgo compiler |
 | Rust | Rust 1.82+, Windows MSVC toolchain | `cargo run --manifest-path examples/rust/Cargo.toml` |
 | C | Windows x64 C compiler | Use `native/InterceptorBridge.h`, `InterceptorBridge.lib` and the DLL |
-| C++ | C++17 | Use the unchanged two-file SDK in `sdk/`; [example](examples/cpp/main.cpp) |
+| C++ | C++17 | Use the unchanged two-file SDK in `sdk/`; [example](https://github.com/TitanCSA/Interceptor-MultiLang/blob/main/examples/cpp/main.cpp) |
 
 The release also contains local **wheel, npm TGZ and NuGet packages** for use in your own projects. They are downloadable files; this repository does not imply publication on PyPI, npm or NuGet.org. The .NET assembly is also usable from F#, VB.NET and compatible PowerShell, and the Java JAR can be consumed by JVM languages such as Kotlin.
 
-Other languages with a Windows C FFI can use the documented [C ABI](native/InterceptorBridge.h). Ready-made bindings above are tested separately; a browser or WebAssembly sandbox cannot load the Windows DLL directly. All capture processes must be **Windows x64**.
+Other languages with a Windows C FFI can use the documented [C ABI](https://github.com/TitanCSA/Interceptor-MultiLang/blob/main/native/InterceptorBridge.h). Ready-made bindings above are tested separately; a browser or WebAssembly sandbox cannot load the Windows DLL directly. All capture processes must be **Windows x64**.
 
 ## Small API
 
@@ -133,4 +133,4 @@ Building the DLL requires Visual Studio 2022 C++ tools, a Windows SDK and CMake.
 
 Tests use an explicitly selected **synthetic backend**, never implicit host capture. Coverage includes all six families, Unicode, exact 64-bit identities, repeated HID usages, null hats, binary fields, retries, stale batches, cancellation and close races. Native fixture checks also run under AddressSanitizer. Live Windows 11 tests use the Microsoft-signed driver with Secure Boot enabled and owned virtual keyboard, mouse and HID gamepad fixtures. These checks are not a certification of every physical model or runtime version.
 
-User-mode wrapper/SDK source is [MIT licensed](LICENSE). The driver has [separate binary terms](licenses/BINARY-LICENSE.txt). Use only on systems you own or are authorized to manage. Software is provided as-is to the extent permitted by law; users are responsible for lawful use, and the authors do not authorize or accept responsibility for misuse.
+User-mode wrapper/SDK source is [MIT licensed](https://github.com/TitanCSA/Interceptor-MultiLang/blob/main/LICENSE). The driver has [separate binary terms](https://github.com/TitanCSA/Interceptor-MultiLang/blob/main/licenses/BINARY-LICENSE.txt). Use only on systems you own or are authorized to manage. Software is provided as-is to the extent permitted by law; users are responsible for lawful use, and the authors do not authorize or accept responsibility for misuse.
