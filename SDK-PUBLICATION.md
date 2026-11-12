@@ -4,7 +4,7 @@ Current source layout and registry coverage. A GitHub download is distinct from 
 
 | Target | Status | Package / documentation |
 | --- | --- | --- |
-| CPP/vcpkg | published_custom_registry | interceptor-multilang-sdk |
+| CPP/vcpkg | published_custom_registry | interceptor-multilang |
 | CPP/conan | public_recipe_builds_locally |  |
 | CPP/nuget | paused_pending_owner_email_confirmation | Interceptor-MultiLang.Native |
 | NET/nuget | paused_pending_owner_email_confirmation | Interceptor.MultiLang |
