@@ -1,20 +1,33 @@
-# TitanCSA.Interceptor
+# Interceptor MultiLang for Rust
 
-Windows x64 .NET 8+ wrapper for the Interceptor keyboard, mouse and gamepad driver.
+Windows x64 Rust bindings for the combined Interceptor input driver.
+Requires Rust 1.82+, Windows x64 and the matching Interceptor 1.4.22.0 driver.
+The native DLL and import library are bundled; no kernel driver is installed by Cargo.
 
-Install the Microsoft-signed driver from the [complete release](https://github.com/TitanCSA/Interceptor-MultiLang/releases/latest), then run your capture application as administrator.
+```sh
+cargo add interceptor-multilang
+```
 
-```csharp
-using TitanCSA.Interceptor;
-using var io = new Interceptor();
-while (true) {
-    var inputs = io.Receive();
-    foreach (var input in inputs)
-        if (input.Kind == "mouse" && (input.State["flags"] & 1) == 0) input.State["y"] = -input.State["y"];
-    io.Send(inputs);
+The library import name is `interceptor`:
+
+```rust
+use interceptor::Interceptor;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut io = Interceptor::new()?;
+    io.close()?;
+    Ok(())
 }
 ```
 
-Receiving consumes input. Forward every family, or set `Blocked` to deliberately suppress an entry. Dispose the client to restore passthrough. The existing one-hour-per-boot driver demo applies; contact **titancsa** on Discord for unrestricted licensing.
+The build script copies the native DLL into Cargo's target output. When distributing
+your executable, place the matching `InterceptorBridge.dll` beside it.
 
-The native wrapper is MIT licensed and included in this package. The kernel driver is distributed separately under its binary demo terms; its source is private.
+Capture requires a separately installed matching driver and an administrator
+terminal. Always forward complete received input batches or explicitly mark
+blocked entries. Closing the context releases capture. The driver's demo and
+licensing restrictions remain separate from this MIT wrapper.
+
+API reference: https://github.com/TitanCSA/Interceptor-MultiLang/blob/main/docs/API.md
+Source: https://github.com/TitanCSA/Interceptor-MultiLang
+Bundled documentation: `docs/API.md`; example: `examples/info.rs`.
