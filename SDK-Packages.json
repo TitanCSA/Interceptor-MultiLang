@@ -1,0 +1,61 @@
+{
+  "project": "Interceptor-MultiLang",
+  "packages": [
+    {
+      "directory": "Interceptor-MultiLang-CPP-vcpkg",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-CPP-conan",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-CPP-nuget",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Python-pypi",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-JavaScript-npm",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-NET-nuget",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Rust-cargo",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Go-modules",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Java-maven",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Java-jitpack",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    },
+    {
+      "directory": "Interceptor-MultiLang-Python-conda-forge",
+      "central_registry_status": "not_published",
+      "distribution": "GitHub source and downloadable release artifacts"
+    }
+  ],
+  "notes": "Registry accounts or community acceptance are separate. No missing language binding is represented as implemented."
+}

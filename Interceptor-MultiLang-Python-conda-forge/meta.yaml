@@ -1,0 +1,35 @@
+package:
+  name: titancsa-interceptor
+  version: "1.0.0"
+
+source:
+  url: https://pypi.io/packages/source/t/titancsa-interceptor/titancsa_interceptor-1.0.0.tar.gz
+  sha256: 9f5f3cfbdcb6c26294b2f2872de862b79e448402516bda68587ae2ed6f2fec9e
+
+build:
+  number: 0
+  skip: true  # [not win64]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=77
+    - wheel
+  run:
+    - python >=3.10
+
+test:
+  imports:
+    - interceptor
+
+about:
+  home: https://github.com/TitanCSA/Interceptor-MultiLang
+  summary: Windows x64 Interceptor-MultiLang SDK; driver or application installed separately.
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - TitanCSA

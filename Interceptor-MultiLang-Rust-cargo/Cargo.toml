@@ -1,0 +1,14 @@
+[package]
+name = "titancsa-interceptor"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.82"
+description = "Minimal Rust bindings for the Interceptor Windows input filter driver"
+license = "MIT"
+build = "build.rs"
+repository = "https://github.com/TitanCSA/Interceptor-MultiLang"
+readme = "README.md"
+include = ["src/**", "build.rs", "native/**", "README.md", "LICENSE"]
+
+[lib]
+name = "interceptor"

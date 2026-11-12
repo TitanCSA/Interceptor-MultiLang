@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+before_install:
+  - sdk install java 25.0.2-tem
+  - sdk use java 25.0.2-tem
+install:
+  - mvn -f Interceptor-MultiLang-Java-jitpack/pom.xml org.codehaus.mojo:versions-maven-plugin:2.19.1:set -DnewVersion=$VERSION -DgenerateBackupPoms=false
+  - mvn -f Interceptor-MultiLang-Java-jitpack/pom.xml clean install -DskipTests
