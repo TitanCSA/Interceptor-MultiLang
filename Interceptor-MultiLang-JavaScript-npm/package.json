@@ -1,5 +1,5 @@
 {
-  "name": "@titancsa/interceptor-multilang",
+  "name": "interceptor-multilang",
   "version": "1.0.0",
   "main": "index.cjs",
   "types": "index.d.ts",
@@ -19,10 +19,20 @@
     "index.d.ts",
     "prebuilds/",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "docs/",
+    "examples/"
   ],
-  "repository": "https://github.com/TitanCSA/Interceptor-MultiLang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TitanCSA/Interceptor-MultiLang.git",
+    "directory": "Interceptor-MultiLang-JavaScript-npm"
+  },
   "publishConfig": {
     "access": "public"
+  },
+  "homepage": "https://github.com/TitanCSA/Interceptor-MultiLang/tree/main/Interceptor-MultiLang-JavaScript-npm#readme",
+  "bugs": {
+    "url": "https://github.com/TitanCSA/Interceptor-MultiLang/issues"
   }
 }
