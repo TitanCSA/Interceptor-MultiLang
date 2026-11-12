@@ -3,15 +3,19 @@ package:
   version: "1.0.0"
 
 source:
-  url: https://pypi.io/packages/source/t/titancsa-interceptor/titancsa_interceptor-1.0.0.tar.gz
-  sha256: 9f5f3cfbdcb6c26294b2f2872de862b79e448402516bda68587ae2ed6f2fec9e
+  url: https://github.com/TitanCSA/Interceptor-MultiLang/archive/8c1aa522081d83e51a6060c1877f125c9ae8135a.tar.gz
+  sha256: 8feb8fef3b5c2d499bfe2c0b0dca984e8b888aea0fc2dfb4f082583e0832140e
 
 build:
   number: 0
   skip: true  # [not win64]
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
+  build:
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    - cmake >=3.24
+    - ninja
   host:
     - python >=3.10
     - pip
