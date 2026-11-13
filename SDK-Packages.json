@@ -50,8 +50,9 @@
     },
     {
       "directory": "Interceptor-MultiLang-Python-conda-forge",
-      "central_registry_status": "not_published",
-      "distribution": "GitHub source and downloadable release artifacts"
+      "language": "Python",
+      "registry": "conda-forge",
+      "distribution": "Source-build recipe; official review and custom channel availability reported separately"
     }
   ],
   "notes": "Registry accounts or community acceptance are separate. No missing language binding is represented as implemented.",
@@ -63,7 +64,7 @@
     "CPP/vcpkg": {
       "status": "published_custom_registry",
       "registry": "https://github.com/TitanCSA/vcpkg-registry",
-      "baseline": "33fd43f72d7137f6ebaac4c1eeab001f66bf3a98",
+      "baseline": "9a706cf6992544778eb26a8b4244e303292f1ce6",
       "port": "interceptor-multilang",
       "microsoft_curated_registry": false,
       "legacy_port": "interceptor-multilang-sdk",
@@ -76,6 +77,8 @@
       "status": "public_recipe_builds_locally",
       "conan_center": false,
       "directory": "Interceptor-MultiLang-CPP-conan",
+      "local_recipe_consumer_verified": true,
+      "minimum_cppstd": 17,
       "github_directory": "packaging/native"
     },
     "CPP/nuget": {
@@ -84,7 +87,8 @@
       "version": "1.0.0",
       "registry_published": false,
       "consumer_build_verified": true,
-      "documentation_bundled": true
+      "documentation_bundled": true,
+      "publication_on_hold_by_owner": true
     },
     "NET/nuget": {
       "status": "paused_pending_owner_email_confirmation",
@@ -92,7 +96,8 @@
       "version": "1.0.1",
       "registry_published": false,
       "consumer_build_verified": true,
-      "documentation_bundled": true
+      "documentation_bundled": true,
+      "publication_on_hold_by_owner": true
     },
     "Python/pypi": {
       "status": "published_install_verified",
@@ -112,7 +117,12 @@
       "conda_build_and_tests_passed": true,
       "custom_channel": "https://raw.githubusercontent.com/TitanCSA/sdk-packages/3bdd457537159e83157bed70f5fae70e07be0f47/conda-channel",
       "custom_channel_install_verified": true,
-      "custom_channel_is_conda_forge": false
+      "custom_channel_is_conda_forge": false,
+      "recipe_format": "v1",
+      "v1_source_build_tests_passed": true,
+      "personal_maintainer_confirmation_required": true,
+      "official_review_status": "v1_recipe_prepared_requires_submission_or_existing_pr_update",
+      "github_directory": "Interceptor-MultiLang-Python-conda-forge"
     },
     "Rust/cargo": {
       "status": "published_install_verified",

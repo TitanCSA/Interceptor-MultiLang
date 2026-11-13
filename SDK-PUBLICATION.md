@@ -5,11 +5,11 @@ Current source layout and registry coverage. A GitHub download is distinct from 
 | Target | Status | Package / documentation |
 | --- | --- | --- |
 | CPP/vcpkg | published_custom_registry | interceptor-multilang |
-| CPP/conan | public_recipe_builds_locally |  |
+| CPP/conan | public_recipe_builds_locally |  [Source](packaging/native/) |
 | CPP/nuget | paused_pending_owner_email_confirmation | Interceptor-MultiLang.Native |
 | NET/nuget | paused_pending_owner_email_confirmation | Interceptor.MultiLang |
 | Python/pypi | published_install_verified | [interceptor-multilang](https://pypi.org/project/interceptor-multilang/1.0.1/) |
-| Python/conda-forge | submitted_pending_maintainer_review | interceptor-multilang |
+| Python/conda-forge | submitted_pending_maintainer_review | interceptor-multilang [Source](Interceptor-MultiLang-Python-conda-forge/) |
 | Rust/cargo | published_install_verified | [interceptor-multilang](https://crates.io/crates/interceptor-multilang) |
 | JavaScript/npm | published_install_verified | [interceptor-multilang](https://www.npmjs.com/package/interceptor-multilang) [Source](Interceptor-MultiLang-JavaScript-npm/) |
 | Java/maven | published_install_verified | [io.github.titancsa:interceptor:1.0.1](https://central.sonatype.com/artifact/io.github.titancsa/interceptor/1.0.1) |
