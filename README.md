@@ -140,3 +140,34 @@ Building the DLL requires Visual Studio 2022 C++ tools, a Windows SDK and CMake.
 Tests use an explicitly selected **synthetic backend**, never implicit host capture. Coverage includes all six families, Unicode, exact 64-bit identities, repeated HID usages, null hats, binary fields, retries, stale batches, cancellation and close races. Native fixture checks also run under AddressSanitizer. Live Windows 11 tests use the Microsoft-signed driver with Secure Boot enabled and owned virtual keyboard, mouse and HID gamepad fixtures. These checks are not a certification of every physical model or runtime version.
 
 User-mode wrapper/SDK source is [MIT licensed](LICENSE). The driver has [separate binary terms](licenses/BINARY-LICENSE.txt). Use only on systems you own or are authorized to manage. Software is provided as-is to the extent permitted by law; users are responsible for lawful use, and the authors do not authorize or accept responsibility for misuse.
+
+<!-- central-sdk-packages:start -->
+## SDK : langages et installation
+
+Les sources, licences, guides API et exemples des SDK sont regroupes dans [le depot dedie](https://github.com/TitanCSA/sdk-packages/tree/main/projects/Interceptor-MultiLang). Choisis ton langage ci-dessous, puis execute sa commande dans le dossier de ton application.
+
+| Langage / registre | Disponibilite | Installation / utilisation |
+| --- | --- | --- |
+| C++ / vcpkg | Registre TitanCSA disponible (configuration ci-dessous) | `vcpkg install interceptor-multilang:x64-windows` |
+| C++ / Conan | Registre TitanCSA disponible (configuration ci-dessous) | `conan install --requires=interceptor-multilang/1.0.0 -r titancsa --build=missing -s compiler.cppstd=17` |
+| C++ / NuGet natif | Publie et verifie | `Install-Package Interceptor-MultiLang.Native -Version 1.0.0` |
+| C# / .NET | Publie et verifie | `dotnet add package Interceptor.MultiLang --version 1.0.1` |
+| Python / pip | Publie et verifie | `python -m pip install interceptor-multilang==1.0.1` |
+| Python / Conda | Canal TitanCSA disponible ; acceptation conda-forge encore en attente | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge interceptor-multilang` |
+| Rust / Cargo | Publie et verifie | `cargo add interceptor-multilang@1.0.1` |
+| JavaScript et TypeScript / npm | Publie et verifie | `npm install interceptor-multilang@1.0.0` |
+| Java et Kotlin / Maven Central | Publie et verifie | `io.github.titancsa:interceptor:1.0.1 (pom.xml / Gradle)` |
+| Java et Kotlin / JitPack | Publie et verifie | `com.github.TitanCSA:Interceptor-MultiLang:java-sdk-v1.0.1 (avec le depot JitPack)` |
+| Go / Go Modules | Publie et verifie | `go get github.com/TitanCSA/Interceptor-MultiLang/Interceptor-MultiLang-Go-modules@v1.0.0` |
+| Go / pkg.go.dev | Publie et verifie | `Documentation : https://pkg.go.dev/github.com/TitanCSA/Interceptor-MultiLang/Interceptor-MultiLang-Go-modules@v1.0.0` |
+| PowerShell / Gallery | Publie et verifie | `Install-Module InterceptorMultiLang -RequiredVersion 1.0.0 -Scope CurrentUser` |
+| Dart et Flutter / pub.dev | Publie et verifie | `dart pub add interceptor_multilang:1.0.0` |
+| Ruby / RubyGems | Publie et verifie | `gem install interceptor-multilang -v 1.0.0` |
+| PHP / Composer | Publie et verifie | `composer require titancsa/interceptor-multilang:1.0.0` |
+
+Pour vcpkg et Conan, configure d abord le registre TitanCSA avec [ces instructions](https://github.com/TitanCSA/sdk-packages/tree/main/projects/Interceptor-MultiLang/README.md#c-et-c). Pour Java/Kotlin, le guide donne le bloc Maven/Gradle a ajouter. Windows x64 est requis pour les bindings natifs ; les pilotes/applications restent a installer separement.
+
+Les commandes indiquees comme prevues ne sont pas encore disponibles. Les versions Go/JitPack existantes utilisent les anciens tags conserves ; aucun ancien import Go n est renomme.
+
+[Guide complet, prerequis et exemples](https://github.com/TitanCSA/sdk-packages/tree/main/projects/Interceptor-MultiLang/README.md).
+<!-- central-sdk-packages:end -->
