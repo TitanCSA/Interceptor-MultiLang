@@ -6,8 +6,8 @@ Current source layout and registry coverage. A GitHub download is distinct from 
 | --- | --- | --- |
 | CPP/vcpkg | published_custom_registry | interceptor-multilang |
 | CPP/conan | published_custom_source_index | [interceptor-multilang](https://github.com/TitanCSA/sdk-packages/tree/089bc73095aa8eda89bacbe10d0b9e58394b0207/conan-index) [Source](packaging/native/) |
-| CPP/nuget | account_email_confirmed_requires_matching_trusted_publishing_policy | Interceptor-MultiLang.Native |
-| NET/nuget | account_email_confirmed_requires_matching_trusted_publishing_policy | Interceptor.MultiLang |
+| CPP/nuget | published_payload_verified | [Interceptor-MultiLang.Native](https://www.nuget.org/packages/Interceptor-MultiLang.Native/1.0.0) |
+| NET/nuget | published_payload_verified | [Interceptor.MultiLang](https://www.nuget.org/packages/Interceptor.MultiLang/1.0.1) |
 | Python/pypi | published_install_verified | [interceptor-multilang](https://pypi.org/project/interceptor-multilang/1.0.1/) |
 | Python/conda-forge | submitted_pending_maintainer_review | interceptor-multilang [Source](Interceptor-MultiLang-Python-conda-forge/) |
 | Rust/cargo | published_install_verified | [interceptor-multilang](https://crates.io/crates/interceptor-multilang) |
