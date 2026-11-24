@@ -23,6 +23,10 @@ Interceptor independently evolves the input-interception workflow popularized by
 
 For Python:
 
+The [Windows package on PyPI](https://pypi.org/project/interceptor-multilang/1.0.2/) is `interceptor-multilang` 1.0.2. It works with Python 3.10 or later on Windows x64 and the combined Interceptor 1.4.22.0 driver. Use `python -m pip install interceptor-multilang==1.0.2` in your project environment. The [SDK setup guide](https://titancsa.github.io/guides/windows-input-sdk-packages/) shows how to check the import and driver status.
+
+For the wheel and example in the complete MultiLang ZIP:
+
 ```powershell
 python -m pip install .\packages\titancsa_interceptor-1.0.0-py3-none-win_amd64.whl
 python .\examples\python\remap.py
