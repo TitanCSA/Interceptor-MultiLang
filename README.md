@@ -64,7 +64,7 @@ For devices connected after installation, call `initialize()` / `Initialize()` b
 | C | Windows x64 C compiler | Use `native/InterceptorBridge.h`, `InterceptorBridge.lib` and the DLL |
 | C++ | C++17 | Use the unchanged two-file SDK in `sdk/`; [example](examples/cpp/main.cpp) |
 
-The release also contains local **wheel, npm TGZ and NuGet packages** for use in your own projects. They are downloadable files; this repository does not imply publication on PyPI, npm or NuGet.org. The .NET assembly is also usable from F#, VB.NET and compatible PowerShell, and the Java JAR can be consumed by JVM languages such as Kotlin.
+The complete ZIP supplies offline wheel, npm TGZ and NuGet packages. The separately verified registry builds are [PyPI 1.0.2](https://pypi.org/project/interceptor-multilang/1.0.2/) and [NuGet 1.0.2 for .NET 8+ on Windows x64](https://www.nuget.org/packages/Interceptor.MultiLang/1.0.2). Both use the corrected driver setup message. The .NET assembly is also usable from F#, VB.NET and compatible PowerShell, and the Java JAR can be consumed by JVM languages such as Kotlin.
 
 Other languages with a Windows C FFI can use the documented [C ABI](native/InterceptorBridge.h). Ready-made bindings above are tested separately; a browser or WebAssembly sandbox cannot load the Windows DLL directly. All capture processes must be **Windows x64**.
 
@@ -144,8 +144,8 @@ Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK 
 | vcpkg | `interceptor-multilang` | `vcpkg install interceptor-multilang:x64-windows` |
 | Conan | `interceptor-multilang` | `conan install --requires=interceptor-multilang/1.0.0 -r titancsa --build=missing -s compiler.cppstd=17` |
 | NuGet | `Interceptor-MultiLang.Native` | `Install-Package Interceptor-MultiLang.Native -Version 1.0.0` |
-| NuGet | `Interceptor.MultiLang` | `dotnet add package Interceptor.MultiLang --version 1.0.1` |
-| PyPI | `interceptor-multilang` | `python -m pip install interceptor-multilang==1.0.1` |
+| NuGet | `Interceptor.MultiLang` | `dotnet add package Interceptor.MultiLang --version 1.0.2` |
+| PyPI | `interceptor-multilang` | `python -m pip install interceptor-multilang==1.0.2` |
 | Conda | `interceptor-multilang` | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge interceptor-multilang` (canal TitanCSA) |
 | crates.io | `interceptor-multilang` | `cargo add interceptor-multilang@1.0.1` |
 | npm | `interceptor-multilang` | `npm install interceptor-multilang@1.0.0` |
