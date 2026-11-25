@@ -1,13 +1,16 @@
 # Interceptor MultiLang - Windows Input SDK for Modern Languages
 
+<!-- simple-start:start -->
+Add Interceptor support to an app written in a language such as Python, Java or C#.
+
+**Start here.** Pick your language, install its package and follow the first example. Install the matching Windows driver separately.
+<!-- simple-start:end -->
+
 <!-- full-version-contact:start -->
 > [!IMPORTANT]
-> **Get the version without the one-hour demo limit**
+> **Version without the one-hour demo limit**
 >
-> **Discord · `titancsa`**. Open [Discord](https://discord.com/app), choose **Friends → Add Friend**, enter **`titancsa`** and send a message.
-> Mention **Interceptor-MultiLang** and ask for the full **Interceptor** driver. TitanCSA will share the purchase details privately.
->
-> **FR · Version sans la limite d’une heure.** Ajoute **`titancsa`** sur Discord et envoie le nom du projet. Le lien d’achat est communiqué en privé.
+> In [Discord](https://discord.com/app), choose **Add Friend** and enter **`titancsa`**. Mention **Interceptor-MultiLang** and ask for the full **Interceptor** driver. Purchase details are sent privately.
 <!-- full-version-contact:end -->
 
 Capture, modify, block and generate keyboard, mouse and compatible gamepad input on Windows using **Python, JavaScript, TypeScript, C#, Java, Go, Rust, C and C++**.
@@ -172,5 +175,3 @@ Pour vcpkg et Conan, configure d abord le registre TitanCSA avec [le guide compl
 
 Les anciens imports Go et versions JitPack gardent leurs tags. Pour les anciennes archives SDK, utilise [les liens de remplacement](https://github.com/TitanCSA/sdk-packages/blob/main/release-assets/URL-MIGRATION.json).
 <!-- central-sdk-packages:end -->
-
-
